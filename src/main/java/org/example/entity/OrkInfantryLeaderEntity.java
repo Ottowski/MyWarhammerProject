@@ -10,7 +10,7 @@ import lombok.*;
 public class OrkInfantryLeaderEntity {
 
     private Long id;
-    private String unitLeaderName;
+    private String name;
     private int movement;
     private int toughness;
     private int wounds;
