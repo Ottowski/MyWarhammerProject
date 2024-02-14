@@ -22,8 +22,10 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="bd99291a-f487-4e1c-9f49-b4504e4bc5ce" dataset="warhammer.orkspistol" active-filter-id="" />
     <filter-actions connection-id="bd99291a-f487-4e1c-9f49-b4504e4bc5ce" dataset="warhammer.astartesinfantry" active-filter-id="" />
     <filter-actions connection-id="bd99291a-f487-4e1c-9f49-b4504e4bc5ce" dataset="warhammer.astartesrangedweapon" active-filter-id="" />
+    <filter-actions connection-id="bd99291a-f487-4e1c-9f49-b4504e4bc5ce" dataset="warhammer.astartesinfantryleader" active-filter-id="" />
     <filter-actions connection-id="bd99291a-f487-4e1c-9f49-b4504e4bc5ce" dataset="warhammer.astartesmeleeweapon" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">

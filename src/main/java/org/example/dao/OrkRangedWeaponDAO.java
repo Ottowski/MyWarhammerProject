@@ -1,13 +1,12 @@
 package org.example.dao;
-import org.example.entity.OrksPistolEntity;
-
+import org.example.entity.OrkRangedWeaponEntity;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class OrksPistolDAO {
+public class OrkRangedWeaponDAO {
     // JDBC URL, username, and password of MySQL server
     private static final String URL = "jdbc:mysql://127.0.0.1:3306/New Warhammer Database";
     private static final String USER = "root";
@@ -22,19 +21,19 @@ public class OrksPistolDAO {
     private static final String INSERT_QUERY = "INSERT INTO orkspistol (name, range, attacks, D3OrD6Attacks, " +
             "ballisticSkill, strength, armorpenetration, damage, D3OrD6Damage) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-    public void insertAstartesPistol(OrksPistolEntity orksPistol) {
+    public void insertOrkRangedWeapon(OrkRangedWeaponEntity orkRangedWeapon) {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
-            preparedStatement.setString(1, orksPistol.getName());
-            preparedStatement.setInt(2, orksPistol.getRange());
-            preparedStatement.setInt(3, orksPistol.getAttacks());
-            preparedStatement.setInt(4, orksPistol.getD3OrD6Attacks());
-            preparedStatement.setInt(5, orksPistol.getBallisticSkill());
-            preparedStatement.setInt(6, orksPistol.getStrength());
-            preparedStatement.setInt(7, orksPistol.getArmorpenetration());
-            preparedStatement.setInt(8, orksPistol.getDamage());
-            preparedStatement.setInt(9, orksPistol.getD3OrD6Damage());
+            preparedStatement.setString(1, orkRangedWeapon.getName());
+            preparedStatement.setInt(2, orkRangedWeapon.getRange());
+            preparedStatement.setInt(3, orkRangedWeapon.getAttacks());
+            preparedStatement.setInt(4, orkRangedWeapon.getD3OrD6Attacks());
+            preparedStatement.setInt(5, orkRangedWeapon.getBallisticSkill());
+            preparedStatement.setInt(6, orkRangedWeapon.getStrength());
+            preparedStatement.setInt(7, orkRangedWeapon.getArmorpenetration());
+            preparedStatement.setInt(8, orkRangedWeapon.getDamage());
+            preparedStatement.setInt(9, orkRangedWeapon.getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -50,3 +49,4 @@ public class OrksPistolDAO {
         }
     }
 }
+
