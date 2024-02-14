@@ -5,7 +5,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class AstarteSpecialrangedweaponEntity {
+public class AstartesSpecialRangedWeaponEntity {
     private Long id;
     private String name;
     private int range;
