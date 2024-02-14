@@ -1,4 +1,4 @@
-package org.example.repository.orksmeleeweaponrepo;
+package org.example.repository;
 
 import org.example.entity.OrkMeleeWeaponEntity;
 

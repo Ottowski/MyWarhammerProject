@@ -1,4 +1,4 @@
-package org.example.repository.astartesinfantryleaderrepo;
+package org.example.repository;
 
 import org.example.entity.AstartesInfantryLeaderEntity;
 

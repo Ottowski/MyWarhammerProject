@@ -1,4 +1,4 @@
-package org.example.repository.orkinfantryrepo;
+package org.example.repository;
 import org.example.entity.OrkInfantryEntity;
 
 import java.util.List;
