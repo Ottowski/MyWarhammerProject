@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class AstartesPistolDAO {
     // JDBC URL, username, and password of MySQL server
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/New Warhammer Database";
+    private static final String URL = "jdbc:mysql://127.0.0.1:3306/New Warhammer Database?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&rewriteBatchedStatements=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10&connectTimeout=30000&socketTimeout=30000&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useConfigs=maxPerformance&sessionVariables=time_zone='+00:00'&useAffectedRows=true&zeroDateTimeBehavior=CONVERT_TO_NULL&autoDeserialize=true&tcpKeepAlive=true&useLocalSessionState=true&useLocalTransactionState=true&clientInfoCacheSize=33554432&clientCachePreparedStatements=true&alwaysSendSetIsolation=false&cacheCallableStmts=true&cachePrepStmts=true&cacheResultSetMetadata=true&maintainTimeStats=false&maintainStmtStats=false&neverRefCursorForGetGeneratedKeys=true&allowLoadLocalInfile=true&allowUrlInLocalInfile=true&alwaysSendMultipartHeader=true&connectUrl='jdbc:mysql://127.0.0.1:3306/New Warhammer Database/warhammer'";
     private static final String USER = "root";
     private static final String PASSWORD = "root";
 
@@ -20,22 +20,23 @@ public class AstartesPistolDAO {
     private static ResultSet resultSet;
 
     // SQL queries
-    private static final String INSERT_QUERY = "INSERT INTO astartespistol (name, range, attacks, D3OrD6Attacks, " +
-            "ballisticSkill, strength, armorpenetration, damage, D3OrD6Damage) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    private static final String INSERT_QUERY = "INSERT INTO astartespistol (name, superchargeWeaponVersion, range, attacks, D3OrD6Attacks, " +
+            "ballisticSkill, strength, armorpenetration, damage, D3OrD6Damage) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     public void insertAstartesPistol(AstartesPistolEntity astartesPistol) {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setString(1, astartesPistol.getName());
-            preparedStatement.setInt(2, astartesPistol.getRange());
-            preparedStatement.setInt(3, astartesPistol.getAttacks());
-            preparedStatement.setInt(4, astartesPistol.getD3OrD6Attacks());
-            preparedStatement.setInt(5, astartesPistol.getBallisticSkill());
-            preparedStatement.setInt(6, astartesPistol.getStrength());
-            preparedStatement.setInt(7, astartesPistol.getArmorpenetration());
-            preparedStatement.setInt(8, astartesPistol.getDamage());
-            preparedStatement.setInt(9, astartesPistol.getD3OrD6Damage());
+            preparedStatement.setInt(2, astartesPistol.getSuperchargeWeaponVersion());
+            preparedStatement.setInt(3, astartesPistol.getRange());
+            preparedStatement.setInt(4, astartesPistol.getAttacks());
+            preparedStatement.setInt(5, astartesPistol.getD3OrD6Attacks());
+            preparedStatement.setInt(6, astartesPistol.getBallisticSkill());
+            preparedStatement.setInt(7, astartesPistol.getStrength());
+            preparedStatement.setInt(8, astartesPistol.getArmorpenetration());
+            preparedStatement.setInt(9, astartesPistol.getDamage());
+            preparedStatement.setInt(10, astartesPistol.getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
