@@ -25,15 +25,16 @@ public class SuperchargeWeaponVersionDAO {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
-            preparedStatement.setString(1, superchargeWeaponVersion.getName());
-            preparedStatement.setInt(2, superchargeWeaponVersion.getRange());
-            preparedStatement.setInt(3, superchargeWeaponVersion.getAttacks());
-            preparedStatement.setInt(4, superchargeWeaponVersion.getD3OrD6Attacks());
-            preparedStatement.setInt(5, superchargeWeaponVersion.getBallisticSkill());
-            preparedStatement.setInt(6, superchargeWeaponVersion.getStrength());
-            preparedStatement.setInt(7, superchargeWeaponVersion.getArmorpenetration());
-            preparedStatement.setInt(8, superchargeWeaponVersion.getDamage());
-            preparedStatement.setInt(9, superchargeWeaponVersion.getD3OrD6Damage());
+            preparedStatement.setInt(1, superchargeWeaponVersion.getId());
+            preparedStatement.setString(2, superchargeWeaponVersion.getName());
+            preparedStatement.setInt(3, superchargeWeaponVersion.getRange());
+            preparedStatement.setInt(4, superchargeWeaponVersion.getAttacks());
+            preparedStatement.setInt(5, superchargeWeaponVersion.getD3OrD6Attacks());
+            preparedStatement.setInt(6, superchargeWeaponVersion.getBallisticSkill());
+            preparedStatement.setInt(7, superchargeWeaponVersion.getStrength());
+            preparedStatement.setInt(8, superchargeWeaponVersion.getArmorpenetration());
+            preparedStatement.setInt(9, superchargeWeaponVersion.getDamage());
+            preparedStatement.setInt(10, superchargeWeaponVersion.getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

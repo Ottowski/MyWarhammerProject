@@ -25,15 +25,16 @@ public class OrkSpecialrangedweaponDAO {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
-            preparedStatement.setString(1, orkSpecialrangedweapon.getName());
-            preparedStatement.setInt(2, orkSpecialrangedweapon.getRange());
-            preparedStatement.setInt(3, orkSpecialrangedweapon.getAttacks());
-            preparedStatement.setInt(4, orkSpecialrangedweapon.getD3OrD6Attacks());
-            preparedStatement.setInt(5, orkSpecialrangedweapon.getBallisticSkill());
-            preparedStatement.setInt(6, orkSpecialrangedweapon.getStrength());
-            preparedStatement.setInt(7, orkSpecialrangedweapon.getArmorpenetration());
-            preparedStatement.setInt(8, orkSpecialrangedweapon.getDamage());
-            preparedStatement.setInt(9, orkSpecialrangedweapon.getD3OrD6Damage());
+            preparedStatement.setInt(1, orkSpecialrangedweapon.getId());
+            preparedStatement.setString(2, orkSpecialrangedweapon.getName());
+            preparedStatement.setInt(3, orkSpecialrangedweapon.getRange());
+            preparedStatement.setInt(4, orkSpecialrangedweapon.getAttacks());
+            preparedStatement.setInt(5, orkSpecialrangedweapon.getD3OrD6Attacks());
+            preparedStatement.setInt(6, orkSpecialrangedweapon.getBallisticSkill());
+            preparedStatement.setInt(7, orkSpecialrangedweapon.getStrength());
+            preparedStatement.setInt(8, orkSpecialrangedweapon.getArmorpenetration());
+            preparedStatement.setInt(9, orkSpecialrangedweapon.getDamage());
+            preparedStatement.setInt(10, orkSpecialrangedweapon.getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

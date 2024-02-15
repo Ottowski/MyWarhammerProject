@@ -7,7 +7,7 @@ import java.util.List;
 public interface OrkMeleeWeaponRepository {
 
 
-    OrkMeleeWeaponEntity get(Long id);
+    OrkMeleeWeaponEntity get(int id);
     void add(OrkMeleeWeaponEntity orkMeleeWeaponEntity);
     void update(OrkMeleeWeaponEntity orkMeleeWeaponEntity);
     void remove(OrkMeleeWeaponEntity orkMeleeWeaponEntity);

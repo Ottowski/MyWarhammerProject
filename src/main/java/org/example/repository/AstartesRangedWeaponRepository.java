@@ -6,7 +6,7 @@ import java.util.List;
 public interface AstartesRangedWeaponRepository {
 
 
-    AstartesRangedWeaponEntity get(Long id);
+    AstartesRangedWeaponEntity get(int id);
     void add(AstartesRangedWeaponEntity astartesRangedWeaponEntity);
     void update(AstartesRangedWeaponEntity astartesRangedWeaponEntity);
     void remove(AstartesRangedWeaponEntity astartesRangedWeaponEntity);

@@ -7,7 +7,7 @@ import java.util.List;
 public interface AstartesInfantryLeaderRepository {
 
 
-    AstartesInfantryLeaderEntity get(Long id);
+    AstartesInfantryLeaderEntity get(int id);
     void add(AstartesInfantryLeaderEntity astartesInfantryLeaderEntity);
     void update(AstartesInfantryLeaderEntity astartesInfantryLeaderEntity);
     void remove(AstartesInfantryLeaderEntity astartesInfantryLeaderEntity);

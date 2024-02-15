@@ -6,7 +6,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class OrksPistolEntity {
-    private Long id;
+    private int id;
     private String name;
     private int range;
     private int attacks;

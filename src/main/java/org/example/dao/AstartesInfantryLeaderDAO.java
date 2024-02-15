@@ -25,14 +25,15 @@ public class AstartesInfantryLeaderDAO {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
-            preparedStatement.setString(1, astartesInfantryLeader.getName());
-            preparedStatement.setInt(2, astartesInfantryLeader.getMovement());
-            preparedStatement.setInt(3, astartesInfantryLeader.getToughness());
-            preparedStatement.setInt(4, astartesInfantryLeader.getWounds());
-            preparedStatement.setInt(5, astartesInfantryLeader.getSave());
-            preparedStatement.setInt(6, astartesInfantryLeader.getMeleeWeapon());
-            preparedStatement.setInt(7, astartesInfantryLeader.getRangedWeapon());
-            preparedStatement.setInt(8, astartesInfantryLeader.getPistol());
+            preparedStatement.setInt(1, astartesInfantryLeader.getId());
+            preparedStatement.setString(2, astartesInfantryLeader.getName());
+            preparedStatement.setInt(3, astartesInfantryLeader.getMovement());
+            preparedStatement.setInt(4, astartesInfantryLeader.getToughness());
+            preparedStatement.setInt(5, astartesInfantryLeader.getWounds());
+            preparedStatement.setInt(6, astartesInfantryLeader.getSave());
+            preparedStatement.setInt(7, astartesInfantryLeader.getMeleeWeapon());
+            preparedStatement.setInt(8, astartesInfantryLeader.getRangedWeapon());
+            preparedStatement.setInt(9, astartesInfantryLeader.getPistol());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

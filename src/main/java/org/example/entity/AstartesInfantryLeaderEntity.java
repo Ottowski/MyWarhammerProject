@@ -9,7 +9,8 @@ import lombok.*;
 @ToString
 public class AstartesInfantryLeaderEntity {
 
-    private Long id;
+    private int id;
+
     private String name;
     private int movement;
     private int toughness;

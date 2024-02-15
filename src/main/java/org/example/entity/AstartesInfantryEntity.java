@@ -9,7 +9,7 @@ import lombok.*;
 @ToString
 public class AstartesInfantryEntity {
 
-    private Long id;
+    private int id;
     private String unitName;
     private int unitLeader;
     private int unitSize;

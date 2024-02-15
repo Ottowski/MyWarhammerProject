@@ -6,7 +6,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class AstartesPistolEntity {
-    private Long id;
+    private int id;
     private String name;
     private int superchargeWeaponVersion;
     private int range;

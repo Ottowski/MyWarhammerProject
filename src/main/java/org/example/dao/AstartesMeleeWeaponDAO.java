@@ -25,14 +25,15 @@ public class AstartesMeleeWeaponDAO {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
-            preparedStatement.setString(1, astartesMeleeWeapon.getName());
-            preparedStatement.setInt(2, astartesMeleeWeapon.getAttacks());
-            preparedStatement.setInt(3, astartesMeleeWeapon.getD3OrD6Attacks());
-            preparedStatement.setInt(4, astartesMeleeWeapon.getWeaponSkill());
-            preparedStatement.setInt(5, astartesMeleeWeapon.getStrength());
-            preparedStatement.setInt(6, astartesMeleeWeapon.getArmorpenetration());
-            preparedStatement.setInt(7, astartesMeleeWeapon.getDamage());
-            preparedStatement.setInt(8, astartesMeleeWeapon.getD3OrD6Damage());
+            preparedStatement.setInt(1, astartesMeleeWeapon.getId());
+            preparedStatement.setString(2, astartesMeleeWeapon.getName());
+            preparedStatement.setInt(3, astartesMeleeWeapon.getAttacks());
+            preparedStatement.setInt(4, astartesMeleeWeapon.getD3OrD6Attacks());
+            preparedStatement.setInt(5, astartesMeleeWeapon.getWeaponSkill());
+            preparedStatement.setInt(6, astartesMeleeWeapon.getStrength());
+            preparedStatement.setInt(7, astartesMeleeWeapon.getArmorpenetration());
+            preparedStatement.setInt(8, astartesMeleeWeapon.getDamage());
+            preparedStatement.setInt(9, astartesMeleeWeapon.getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

@@ -26,15 +26,16 @@ public class OrkPistolDAO {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
-            preparedStatement.setString(1, orkPistol.getName());
-            preparedStatement.setInt(2, orkPistol.getRange());
-            preparedStatement.setInt(3, orkPistol.getAttacks());
-            preparedStatement.setInt(4, orkPistol.getD3OrD6Attacks());
-            preparedStatement.setInt(5, orkPistol.getBallisticSkill());
-            preparedStatement.setInt(6, orkPistol.getStrength());
-            preparedStatement.setInt(7, orkPistol.getArmorpenetration());
-            preparedStatement.setInt(8, orkPistol.getDamage());
-            preparedStatement.setInt(9, orkPistol.getD3OrD6Damage());
+            preparedStatement.setInt(1, orkPistol.getId());
+            preparedStatement.setString(2, orkPistol.getName());
+            preparedStatement.setInt(3, orkPistol.getRange());
+            preparedStatement.setInt(4, orkPistol.getAttacks());
+            preparedStatement.setInt(5, orkPistol.getD3OrD6Attacks());
+            preparedStatement.setInt(6, orkPistol.getBallisticSkill());
+            preparedStatement.setInt(7, orkPistol.getStrength());
+            preparedStatement.setInt(8, orkPistol.getArmorpenetration());
+            preparedStatement.setInt(9, orkPistol.getDamage());
+            preparedStatement.setInt(10, orkPistol.getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

@@ -8,8 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class OrkInfantryEntity {
-
-    private Long id;
+    private int id;
     private String unitName;
     private int unitLeader;
     private int unitSize;

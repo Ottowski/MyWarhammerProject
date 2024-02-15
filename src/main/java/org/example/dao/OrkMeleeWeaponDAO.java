@@ -25,14 +25,15 @@ public class OrkMeleeWeaponDAO {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
-            preparedStatement.setString(1, orkMeleeWeapon.getName());
-            preparedStatement.setInt(2, orkMeleeWeapon.getAttacks());
-            preparedStatement.setInt(3, orkMeleeWeapon.getD3OrD6Attacks());
-            preparedStatement.setInt(4, orkMeleeWeapon.getWeaponSkill());
-            preparedStatement.setInt(5, orkMeleeWeapon.getStrength());
-            preparedStatement.setInt(6, orkMeleeWeapon.getArmorpenetration());
-            preparedStatement.setInt(7, orkMeleeWeapon.getDamage());
-            preparedStatement.setInt(8, orkMeleeWeapon.getD3OrD6Damage());
+            preparedStatement.setInt(1, orkMeleeWeapon.getId());
+            preparedStatement.setString(2, orkMeleeWeapon.getName());
+            preparedStatement.setInt(3, orkMeleeWeapon.getAttacks());
+            preparedStatement.setInt(4, orkMeleeWeapon.getD3OrD6Attacks());
+            preparedStatement.setInt(5, orkMeleeWeapon.getWeaponSkill());
+            preparedStatement.setInt(6, orkMeleeWeapon.getStrength());
+            preparedStatement.setInt(7, orkMeleeWeapon.getArmorpenetration());
+            preparedStatement.setInt(8, orkMeleeWeapon.getDamage());
+            preparedStatement.setInt(9, orkMeleeWeapon.getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

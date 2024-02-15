@@ -26,15 +26,16 @@ public class AstartesInfantryDAO {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
-            preparedStatement.setString(1, astartesInfantry.getUnitName());
-            preparedStatement.setInt(2, astartesInfantry.getUnitLeader());
-            preparedStatement.setInt(3, astartesInfantry.getMovement());
-            preparedStatement.setInt(4, astartesInfantry.getToughness());
-            preparedStatement.setInt(5, astartesInfantry.getWounds());
-            preparedStatement.setInt(6, astartesInfantry.getSave());
-            preparedStatement.setInt(7, astartesInfantry.getMeleeWeapon());
-            preparedStatement.setInt(8, astartesInfantry.getRangedWeapon());
-            preparedStatement.setInt(9, astartesInfantry.getPistol());
+            preparedStatement.setInt(1, astartesInfantry.getId());
+            preparedStatement.setString(2, astartesInfantry.getUnitName());
+            preparedStatement.setInt(3, astartesInfantry.getUnitLeader());
+            preparedStatement.setInt(4, astartesInfantry.getMovement());
+            preparedStatement.setInt(5, astartesInfantry.getToughness());
+            preparedStatement.setInt(6, astartesInfantry.getWounds());
+            preparedStatement.setInt(7, astartesInfantry.getSave());
+            preparedStatement.setInt(8, astartesInfantry.getMeleeWeapon());
+            preparedStatement.setInt(9, astartesInfantry.getRangedWeapon());
+            preparedStatement.setInt(10, astartesInfantry.getPistol());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

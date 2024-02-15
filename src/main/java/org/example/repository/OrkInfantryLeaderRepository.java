@@ -6,7 +6,7 @@ import java.util.List;
 public interface OrkInfantryLeaderRepository {
 
 
-    OrkInfantryLeaderEntity get(Long id);
+    OrkInfantryLeaderEntity get(int id);
     void add(OrkInfantryLeaderEntity orkInfantryLeaderEntity);
     void update(OrkInfantryLeaderEntity orkInfantryLeaderEntity);
     void remove(OrkInfantryLeaderEntity orkInfantryLeaderEntity);

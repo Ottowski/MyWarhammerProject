@@ -4,7 +4,7 @@ import java.util.List;
 public interface SuperchargeWeaponVersionRepository {
 
 
-    SuperchargeWeaponVersionEntity get(Long id);
+    SuperchargeWeaponVersionEntity get(int id);
     void add(SuperchargeWeaponVersionEntity superchargeWeaponVersionEntity);
     void update(SuperchargeWeaponVersionEntity superchargeWeaponVersionEntity);
     void remove(SuperchargeWeaponVersionEntity superchargeWeaponVersionEntity);

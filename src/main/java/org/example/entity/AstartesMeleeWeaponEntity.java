@@ -7,7 +7,8 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class AstartesMeleeWeaponEntity {
-    private Long id;
+    private int id;
+
     private String name;
     private int attacks;
     private int D3OrD6Attacks;

@@ -25,17 +25,18 @@ public class OrkInfantryDAO {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
-            preparedStatement.setString(1, orkInfantry.getUnitName());
-            preparedStatement.setInt(2, orkInfantry.getUnitLeader());
-            preparedStatement.setInt(2, orkInfantry.getUnitSize());
-            preparedStatement.setInt(2, orkInfantry.getMovement());
-            preparedStatement.setInt(3, orkInfantry.getToughness());
-            preparedStatement.setInt(4, orkInfantry.getWounds());
-            preparedStatement.setInt(5, orkInfantry.getSave());
-            preparedStatement.setInt(6, orkInfantry.getMeleeWeapon());
-            preparedStatement.setInt(7, orkInfantry.getRangedWeapon());
-            preparedStatement.setInt(8, orkInfantry.getPistol());
-            preparedStatement.setInt(8, orkInfantry.getSpecialUnitRangedWeapon());
+            preparedStatement.setInt(1, orkInfantry.getId());
+            preparedStatement.setString(2, orkInfantry.getUnitName());
+            preparedStatement.setInt(3, orkInfantry.getUnitLeader());
+            preparedStatement.setInt(4, orkInfantry.getUnitSize());
+            preparedStatement.setInt(5, orkInfantry.getMovement());
+            preparedStatement.setInt(6, orkInfantry.getToughness());
+            preparedStatement.setInt(7, orkInfantry.getWounds());
+            preparedStatement.setInt(8, orkInfantry.getSave());
+            preparedStatement.setInt(9, orkInfantry.getMeleeWeapon());
+            preparedStatement.setInt(10, orkInfantry.getRangedWeapon());
+            preparedStatement.setInt(11, orkInfantry.getPistol());
+            preparedStatement.setInt(12, orkInfantry.getSpecialUnitRangedWeapon());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

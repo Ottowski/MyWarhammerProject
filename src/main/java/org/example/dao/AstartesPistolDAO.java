@@ -27,16 +27,17 @@ public class AstartesPistolDAO {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
-            preparedStatement.setString(1, astartesPistol.getName());
-            preparedStatement.setInt(2, astartesPistol.getSuperchargeWeaponVersion());
-            preparedStatement.setInt(3, astartesPistol.getRange());
-            preparedStatement.setInt(4, astartesPistol.getAttacks());
-            preparedStatement.setInt(5, astartesPistol.getD3OrD6Attacks());
-            preparedStatement.setInt(6, astartesPistol.getBallisticSkill());
-            preparedStatement.setInt(7, astartesPistol.getStrength());
-            preparedStatement.setInt(8, astartesPistol.getArmorpenetration());
-            preparedStatement.setInt(9, astartesPistol.getDamage());
-            preparedStatement.setInt(10, astartesPistol.getD3OrD6Damage());
+            preparedStatement.setInt(1, astartesPistol.getId());
+            preparedStatement.setString(2, astartesPistol.getName());
+            preparedStatement.setInt(3, astartesPistol.getSuperchargeWeaponVersion());
+            preparedStatement.setInt(4, astartesPistol.getRange());
+            preparedStatement.setInt(5, astartesPistol.getAttacks());
+            preparedStatement.setInt(6, astartesPistol.getD3OrD6Attacks());
+            preparedStatement.setInt(7, astartesPistol.getBallisticSkill());
+            preparedStatement.setInt(8, astartesPistol.getStrength());
+            preparedStatement.setInt(9, astartesPistol.getArmorpenetration());
+            preparedStatement.setInt(10, astartesPistol.getDamage());
+            preparedStatement.setInt(11, astartesPistol.getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
