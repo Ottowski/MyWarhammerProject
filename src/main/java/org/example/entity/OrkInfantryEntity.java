@@ -1,7 +1,5 @@
 package org.example.entity;
-
 import lombok.*;
-
 @Data
 @Builder
 @AllArgsConstructor
@@ -21,4 +19,3 @@ public class OrkInfantryEntity {
     private int pistol;
     private int specialUnitRangedWeapon;
 }
-

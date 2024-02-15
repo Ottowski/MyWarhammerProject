@@ -1,14 +1,11 @@
 package org.example.entity;
-
 import lombok.*;
-
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 public class AstartesInfantryEntity {
-
     private int id;
     private String unitName;
     private int unitLeader;

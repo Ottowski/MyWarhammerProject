@@ -1,6 +1,5 @@
 package org.example.entity;
 import lombok.*;
-
 @Data
 @Builder
 @AllArgsConstructor
@@ -8,7 +7,6 @@ import lombok.*;
 @ToString
 public class AstartesMeleeWeaponEntity {
     private int id;
-
     private String name;
     private int attacks;
     private int D3OrD6Attacks;
