@@ -7,9 +7,9 @@ public interface OrkInfantryLeaderRepository {
 
 
     OrkInfantryLeaderEntity get(Long id);
-    void add(OrkInfantryLeaderEntity orkinfantryleaderentity);
-    void update(OrkInfantryLeaderEntity orkinfantryleaderentity);
-    void remove(OrkInfantryLeaderEntity orkinfantryleaderentity);
+    void add(OrkInfantryLeaderEntity orkInfantryLeaderEntity);
+    void update(OrkInfantryLeaderEntity orkInfantryLeaderEntity);
+    void remove(OrkInfantryLeaderEntity orkInfantryLeaderEntity);
 
     List<OrkInfantryLeaderEntity> getAllOrkInfantryLeader();
 }

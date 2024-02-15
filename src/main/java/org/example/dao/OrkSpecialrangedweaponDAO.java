@@ -1,5 +1,5 @@
 package org.example.dao;
-import org.example.entity.OrkSpecialrangedweaponEntity;
+import org.example.entity.OrkSpecialRangedWeaponEntity;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -21,7 +21,7 @@ public class OrkSpecialrangedweaponDAO {
     private static final String INSERT_QUERY = "INSERT INTO orkspecialrangedweapon (name, range, attacks, D3OrD6Attacks, " +
             "ballisticSkill, strength, armorpenetration, damage, D3OrD6Damage) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-    public void insertOrkSpecialRangedWeapon(OrkSpecialrangedweaponEntity orkSpecialrangedweapon) {
+    public void insertOrkSpecialRangedWeapon(OrkSpecialRangedWeaponEntity orkSpecialrangedweapon) {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);

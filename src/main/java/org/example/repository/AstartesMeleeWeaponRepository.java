@@ -7,9 +7,9 @@ public interface AstartesMeleeWeaponRepository {
 
 
     AstartesMeleeWeaponEntity get(Long id);
-    void add(AstartesMeleeWeaponEntity astartesmeleeweaponentity);
-    void update(AstartesMeleeWeaponEntity astartesmeleeweaponentity);
-    void remove(AstartesMeleeWeaponEntity astartesmeleeweaponentity);
+    void add(AstartesMeleeWeaponEntity astartesMeleeWeaponEntity);
+    void update(AstartesMeleeWeaponEntity astartesMeleeWeaponEntity);
+    void remove(AstartesMeleeWeaponEntity astartesMeleeWeaponEntity);
 
     List<AstartesMeleeWeaponEntity> getAllAstartesMeleeWeapon();
 }

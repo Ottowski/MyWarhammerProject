@@ -5,7 +5,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class OrkSpecialrangedweaponEntity {
+public class OrkSpecialRangedWeaponEntity {
     private Long id;
     private String name;
     private int range;

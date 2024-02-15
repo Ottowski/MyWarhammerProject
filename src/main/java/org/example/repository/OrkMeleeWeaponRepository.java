@@ -8,9 +8,9 @@ public interface OrkMeleeWeaponRepository {
 
 
     OrkMeleeWeaponEntity get(Long id);
-    void add(OrkMeleeWeaponEntity orkmeleeweaponentity);
-    void update(OrkMeleeWeaponEntity orkmeleeweaponentity);
-    void remove(OrkMeleeWeaponEntity orkmeleeweaponentity);
+    void add(OrkMeleeWeaponEntity orkMeleeWeaponEntity);
+    void update(OrkMeleeWeaponEntity orkMeleeWeaponEntity);
+    void remove(OrkMeleeWeaponEntity orkMeleeWeaponEntity);
 
     List<OrkMeleeWeaponEntity> getAllOrkMeleeWeapon();
 }

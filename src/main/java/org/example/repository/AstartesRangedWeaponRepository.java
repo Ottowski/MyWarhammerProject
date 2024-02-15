@@ -7,9 +7,9 @@ public interface AstartesRangedWeaponRepository {
 
 
     AstartesRangedWeaponEntity get(Long id);
-    void add(AstartesRangedWeaponEntity astartesrangedweaponentity);
-    void update(AstartesRangedWeaponEntity astartesrangedweaponentity);
-    void remove(AstartesRangedWeaponEntity astartesrangedweaponentity);
+    void add(AstartesRangedWeaponEntity astartesRangedWeaponEntity);
+    void update(AstartesRangedWeaponEntity astartesRangedWeaponEntity);
+    void remove(AstartesRangedWeaponEntity astartesRangedWeaponEntity);
 
     List<AstartesRangedWeaponEntity> getAllAstartesRangedWeapon();
 }

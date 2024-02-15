@@ -7,9 +7,9 @@ public interface OrkRangedWeaponRepository {
 
 
     OrkRangedWeaponEntity get(Long id);
-    void add(OrkRangedWeaponEntity orkrangedweaponentity);
-    void update(OrkRangedWeaponEntity orkrangedweaponentity);
-    void remove(OrkRangedWeaponEntity orkrangedweaponentity);
+    void add(OrkRangedWeaponEntity orkRangedWeaponEntity);
+    void update(OrkRangedWeaponEntity orkRangedWeaponEntity);
+    void remove(OrkRangedWeaponEntity orkRangedWeaponEntity);
 
     List<OrkRangedWeaponEntity> getAllOrkRangedWeapon();
 }

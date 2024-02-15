@@ -8,9 +8,9 @@ public interface AstartesInfantryLeaderRepository {
 
 
     AstartesInfantryLeaderEntity get(Long id);
-    void add(AstartesInfantryLeaderEntity astartesinfantryleaderentity);
-    void update(AstartesInfantryLeaderEntity astartesinfantryleaderentity);
-    void remove(AstartesInfantryLeaderEntity astartesinfantryleaderentity);
+    void add(AstartesInfantryLeaderEntity astartesInfantryLeaderEntity);
+    void update(AstartesInfantryLeaderEntity astartesInfantryLeaderEntity);
+    void remove(AstartesInfantryLeaderEntity astartesInfantryLeaderEntity);
 
     List<AstartesInfantryLeaderEntity> getAllAstartesInfantryLeader();
 }

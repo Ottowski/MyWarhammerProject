@@ -8,9 +8,9 @@ public interface AstartesInfantryRepository {
 
 
     AstartesInfantryEntity get(Long id);
-    void add(AstartesInfantryEntity astartesinfantryentity);
-    void update(AstartesInfantryEntity astartesinfantryentity);
-    void remove(AstartesInfantryEntity astartesinfantryentity);
+    void add(AstartesInfantryEntity astartesInfantryEntity);
+    void update(AstartesInfantryEntity astartesInfantryEntity);
+    void remove(AstartesInfantryEntity astartesInfantryEntity);
 
     List<AstartesInfantryEntity> getAllAstartesInfantry();
 }
