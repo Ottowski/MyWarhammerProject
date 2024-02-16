@@ -15,18 +15,18 @@ public class AstartesInfantryLeaderDAO {
     private static PreparedStatement preparedStatement;
     private static ResultSet resultSet;
     // SQL queries
-    private static final String INSERT_QUERY = "INSERT INTO astartesinfantryleader (unitName, movement, toughness, " +
+    private static final String INSERT_QUERY = "INSERT INTO astartesinfantryleader (unitLeaderName, movement, toughness, " +
             "wounds, save, meleeWeapon, rangedWeapon, pistol) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     public void insertAstartesInfantryLeader(AstartesInfantryLeaderEntity astartesInfantryLeader) {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, astartesInfantryLeader.getId());
-            preparedStatement.setString(2, astartesInfantryLeader.getName());
-            preparedStatement.setInt(3, astartesInfantryLeader.getMovement());
-            preparedStatement.setInt(4, astartesInfantryLeader.getToughness());
-            preparedStatement.setInt(5, astartesInfantryLeader.getWounds());
-            preparedStatement.setInt(6, astartesInfantryLeader.getSave());
+            preparedStatement.setString(2, astartesInfantryLeader.getUnitLeaderName());
+            preparedStatement.setInt(3, astartesInfantryLeader.getMovement().getMovement());
+            preparedStatement.setInt(4, astartesInfantryLeader.getToughness().getToughness());
+            preparedStatement.setInt(5, astartesInfantryLeader.getWounds().getWounds());
+            preparedStatement.setInt(6, astartesInfantryLeader.getSave().getSave());
             preparedStatement.setInt(7, astartesInfantryLeader.getMeleeWeapon());
             preparedStatement.setInt(8, astartesInfantryLeader.getRangedWeapon());
             preparedStatement.setInt(9, astartesInfantryLeader.getPistol());

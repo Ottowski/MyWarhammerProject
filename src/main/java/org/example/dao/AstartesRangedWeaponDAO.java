@@ -15,22 +15,22 @@ public class AstartesRangedWeaponDAO {
     private static PreparedStatement preparedStatement;
     private static ResultSet resultSet;
     // SQL queries
-    private static final String INSERT_QUERY = "INSERT INTO astartesrangedweapon (name, range, attacks, D3OrD6Attacks, " +
+    private static final String INSERT_QUERY = "INSERT INTO astartesrangedweapon (rangedWeaponName, range, attacks, D3OrD6Attacks, " +
             "ballisticSkill, strength, armorpenetration, damage, D3OrD6Damage) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
     public void insertAstartesRangedWeapon(AstartesRangedWeaponEntity astartesRangedWeapon) {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, astartesRangedWeapon.getId());
-            preparedStatement.setString(2, astartesRangedWeapon.getName());
-            preparedStatement.setInt(3, astartesRangedWeapon.getRange());
-            preparedStatement.setInt(4, astartesRangedWeapon.getAttacks());
-            preparedStatement.setInt(5, astartesRangedWeapon.getD3OrD6Attacks());
-            preparedStatement.setInt(6, astartesRangedWeapon.getBallisticSkill());
-            preparedStatement.setInt(7, astartesRangedWeapon.getStrength());
-            preparedStatement.setInt(8, astartesRangedWeapon.getArmorpenetration());
-            preparedStatement.setInt(9, astartesRangedWeapon.getDamage());
-            preparedStatement.setInt(10, astartesRangedWeapon.getD3OrD6Damage());
+            preparedStatement.setString(2, astartesRangedWeapon.getRangedWeaponName());
+            preparedStatement.setInt(3, astartesRangedWeapon.getRange().getRange());
+            preparedStatement.setInt(4, astartesRangedWeapon.getAttacks().getAttacks());
+            preparedStatement.setInt(5, astartesRangedWeapon.getD3OrD6Attacks().getD3OrD6Attacks());
+            preparedStatement.setInt(6, astartesRangedWeapon.getBallisticSkill().getBallisticSkill());
+            preparedStatement.setInt(7, astartesRangedWeapon.getStrength().getStrength());
+            preparedStatement.setInt(8, astartesRangedWeapon.getArmorpenetration().getArmorpenetration());
+            preparedStatement.setInt(9, astartesRangedWeapon.getDamage().getDamage());
+            preparedStatement.setInt(10, astartesRangedWeapon.getD3OrD6Damage().getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

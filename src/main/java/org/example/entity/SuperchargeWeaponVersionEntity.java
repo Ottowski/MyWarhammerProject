@@ -1,5 +1,7 @@
 package org.example.entity;
 import lombok.*;
+import org.example.coreProfileWeaponStats.*;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -7,13 +9,13 @@ import lombok.*;
 @ToString
 public class SuperchargeWeaponVersionEntity {
     private int id;
-    private String name;
-    private int range;
-    private int attacks;
-    private int D3OrD6Attacks;
-    private int ballisticSkill;
-    private int strength;
-    private int armorpenetration;
-    private int damage;
-    private int D3OrD6Damage;
+    private String superchargeWeaponName;
+    private RANGE range;
+    private ATTACKS attacks;
+    private D3ORD6ATTACKS D3OrD6Attacks;
+    private BALLISTICSKILL ballisticSkill;
+    private STRENGTH strength;
+    private ARMORPENETRATION armorpenetration;
+    private DAMAGE damage;
+    private D3ORD6DAMAGE D3OrD6Damage;
 }

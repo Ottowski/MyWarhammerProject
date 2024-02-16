@@ -25,10 +25,10 @@ public class OrkInfantryDAO {
             preparedStatement.setString(2, orkInfantry.getUnitName());
             preparedStatement.setInt(3, orkInfantry.getUnitLeader());
             preparedStatement.setInt(4, orkInfantry.getUnitSize());
-            preparedStatement.setInt(5, orkInfantry.getMovement());
-            preparedStatement.setInt(6, orkInfantry.getToughness());
-            preparedStatement.setInt(7, orkInfantry.getWounds());
-            preparedStatement.setInt(8, orkInfantry.getSave());
+            preparedStatement.setInt(5, orkInfantry.getMovement().getMovement());
+            preparedStatement.setInt(6, orkInfantry.getToughness().getToughness());
+            preparedStatement.setInt(7, orkInfantry.getWounds().getWounds());
+            preparedStatement.setInt(8, orkInfantry.getSave().getSave());
             preparedStatement.setInt(9, orkInfantry.getMeleeWeapon());
             preparedStatement.setInt(10, orkInfantry.getRangedWeapon());
             preparedStatement.setInt(11, orkInfantry.getPistol());

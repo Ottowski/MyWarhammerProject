@@ -15,21 +15,21 @@ public class OrkMeleeWeaponDAO {
     private static PreparedStatement preparedStatement;
     private static ResultSet resultSet;
     // SQL queries
-    private static final String INSERT_QUERY = "INSERT INTO orkmeleeweapon (name, attacks, D3OrD6Attacks, " +
+    private static final String INSERT_QUERY = "INSERT INTO orkmeleeweapon (meleeWeaponName, attacks, D3OrD6Attacks, " +
             "weaponSkill, strength, armorpenetration, damage, D3OrD6Damage) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     public void insertOrkMeleeWeapon(OrkMeleeWeaponEntity orkMeleeWeapon) {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, orkMeleeWeapon.getId());
-            preparedStatement.setString(2, orkMeleeWeapon.getName());
-            preparedStatement.setInt(3, orkMeleeWeapon.getAttacks());
-            preparedStatement.setInt(4, orkMeleeWeapon.getD3OrD6Attacks());
-            preparedStatement.setInt(5, orkMeleeWeapon.getWeaponSkill());
-            preparedStatement.setInt(6, orkMeleeWeapon.getStrength());
-            preparedStatement.setInt(7, orkMeleeWeapon.getArmorpenetration());
-            preparedStatement.setInt(8, orkMeleeWeapon.getDamage());
-            preparedStatement.setInt(9, orkMeleeWeapon.getD3OrD6Damage());
+            preparedStatement.setString(2, orkMeleeWeapon.getMeleeWeaponName());
+            preparedStatement.setInt(3, orkMeleeWeapon.getAttacks().getAttacks());
+            preparedStatement.setInt(4, orkMeleeWeapon.getD3OrD6Attacks().getD3OrD6Attacks());
+            preparedStatement.setInt(5, orkMeleeWeapon.getWeaponSkill().getWeaponSkill());
+            preparedStatement.setInt(6, orkMeleeWeapon.getStrength().getStrength());
+            preparedStatement.setInt(7, orkMeleeWeapon.getArmorpenetration().getArmorpenetration());
+            preparedStatement.setInt(8, orkMeleeWeapon.getDamage().getDamage());
+            preparedStatement.setInt(9, orkMeleeWeapon.getD3OrD6Damage().getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

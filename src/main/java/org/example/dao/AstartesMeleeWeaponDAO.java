@@ -1,5 +1,6 @@
 package org.example.dao;
 import org.example.entity.AstartesMeleeWeaponEntity;
+import org.example.coreProfileWeaponStats.ATTACKS;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -15,21 +16,21 @@ public class AstartesMeleeWeaponDAO {
     private static PreparedStatement preparedStatement;
     private static ResultSet resultSet;
     // SQL queries
-    private static final String INSERT_QUERY = "INSERT INTO astartesmeleeweapon (name, attacks, D3OrD6Attacks, " +
+    private static final String INSERT_QUERY = "INSERT INTO astartesmeleeweapon (meleeWeaponName, attacks, D3OrD6Attacks, " +
             "weaponSkill, strength, armorpenetration, damage, D3OrD6Damage) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     public void insertAstartesMeleeWeapon(AstartesMeleeWeaponEntity astartesMeleeWeapon) {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, astartesMeleeWeapon.getId());
-            preparedStatement.setString(2, astartesMeleeWeapon.getName());
-            preparedStatement.setInt(3, astartesMeleeWeapon.getAttacks());
-            preparedStatement.setInt(4, astartesMeleeWeapon.getD3OrD6Attacks());
-            preparedStatement.setInt(5, astartesMeleeWeapon.getWeaponSkill());
-            preparedStatement.setInt(6, astartesMeleeWeapon.getStrength());
-            preparedStatement.setInt(7, astartesMeleeWeapon.getArmorpenetration());
-            preparedStatement.setInt(8, astartesMeleeWeapon.getDamage());
-            preparedStatement.setInt(9, astartesMeleeWeapon.getD3OrD6Damage());
+            preparedStatement.setString(2, astartesMeleeWeapon.getMeleeWeaponName());
+            preparedStatement.setInt(3, astartesMeleeWeapon.getAttacks().getAttacks());
+            preparedStatement.setInt(4, astartesMeleeWeapon.getD3OrD6Attacks().getD3OrD6Attacks());
+            preparedStatement.setInt(5, astartesMeleeWeapon.getWeaponSkill().getWeaponSkill());
+            preparedStatement.setInt(6, astartesMeleeWeapon.getStrength().getStrength());
+            preparedStatement.setInt(7, astartesMeleeWeapon.getArmorpenetration().getArmorpenetration());
+            preparedStatement.setInt(8, astartesMeleeWeapon.getDamage().getDamage());
+            preparedStatement.setInt(9, astartesMeleeWeapon.getD3OrD6Damage().getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

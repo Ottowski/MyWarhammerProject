@@ -15,18 +15,18 @@ public class OrkInfantryLeaderDAO {
     private static PreparedStatement preparedStatement;
     private static ResultSet resultSet;
     // SQL queries
-    private static final String INSERT_QUERY = "INSERT INTO orkinfantryleader (name, movement, toughness, " +
+    private static final String INSERT_QUERY = "INSERT INTO orkinfantryleader (unitLeaderName, movement, toughness, " +
             "wounds, save, meleeWeapon, rangedWeapon, pistol, specialUnitRangedWeapon) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
     public void insertOrkInfantryLeader(OrkInfantryLeaderEntity orkInfantryLeader) {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, orkInfantryLeader.getId());
-            preparedStatement.setString(2, orkInfantryLeader.getName());
-            preparedStatement.setInt(3, orkInfantryLeader.getMovement());
-            preparedStatement.setInt(4, orkInfantryLeader.getToughness());
-            preparedStatement.setInt(5, orkInfantryLeader.getWounds());
-            preparedStatement.setInt(6, orkInfantryLeader.getSave());
+            preparedStatement.setString(2, orkInfantryLeader.getUnitLeaderName());
+            preparedStatement.setInt(3, orkInfantryLeader.getMovement().getMovement());
+            preparedStatement.setInt(4, orkInfantryLeader.getToughness().getToughness());
+            preparedStatement.setInt(5, orkInfantryLeader.getWounds().getWounds());
+            preparedStatement.setInt(6, orkInfantryLeader.getSave().getSave());
             preparedStatement.setInt(7, orkInfantryLeader.getMeleeWeapon());
             preparedStatement.setInt(8, orkInfantryLeader.getRangedWeapon());
             preparedStatement.setInt(9, orkInfantryLeader.getPistol());

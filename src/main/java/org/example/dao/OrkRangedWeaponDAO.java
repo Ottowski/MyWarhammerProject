@@ -15,22 +15,22 @@ public class OrkRangedWeaponDAO {
     private static PreparedStatement preparedStatement;
     private static ResultSet resultSet;
     // SQL queries
-    private static final String INSERT_QUERY = "INSERT INTO orkspistol (name, range, attacks, D3OrD6Attacks, " +
+    private static final String INSERT_QUERY = "INSERT INTO orkspistol (rangedWeaponName, range, attacks, D3OrD6Attacks, " +
             "ballisticSkill, strength, armorpenetration, damage, D3OrD6Damage) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
     public void insertOrkRangedWeapon(OrkRangedWeaponEntity orkRangedWeapon) {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, orkRangedWeapon.getId());
-            preparedStatement.setString(2, orkRangedWeapon.getName());
-            preparedStatement.setInt(3, orkRangedWeapon.getRange());
-            preparedStatement.setInt(4, orkRangedWeapon.getAttacks());
-            preparedStatement.setInt(5, orkRangedWeapon.getD3OrD6Attacks());
-            preparedStatement.setInt(6, orkRangedWeapon.getBallisticSkill());
-            preparedStatement.setInt(7, orkRangedWeapon.getStrength());
-            preparedStatement.setInt(8, orkRangedWeapon.getArmorpenetration());
-            preparedStatement.setInt(9, orkRangedWeapon.getDamage());
-            preparedStatement.setInt(10, orkRangedWeapon.getD3OrD6Damage());
+            preparedStatement.setString(2, orkRangedWeapon.getRangedWeaponName());
+            preparedStatement.setInt(3, orkRangedWeapon.getRange().getRange());
+            preparedStatement.setInt(4, orkRangedWeapon.getAttacks().getAttacks());
+            preparedStatement.setInt(5, orkRangedWeapon.getD3OrD6Attacks().getD3OrD6Attacks());
+            preparedStatement.setInt(6, orkRangedWeapon.getBallisticSkill().getBallisticSkill());
+            preparedStatement.setInt(7, orkRangedWeapon.getStrength().getStrength());
+            preparedStatement.setInt(8, orkRangedWeapon.getArmorpenetration().getArmorpenetration());
+            preparedStatement.setInt(9, orkRangedWeapon.getDamage().getDamage());
+            preparedStatement.setInt(10, orkRangedWeapon.getD3OrD6Damage().getD3OrD6Damage());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

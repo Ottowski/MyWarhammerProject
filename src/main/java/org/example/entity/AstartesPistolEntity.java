@@ -1,5 +1,7 @@
 package org.example.entity;
+import org.example.coreProfileWeaponStats.*;
 import lombok.*;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -7,14 +9,14 @@ import lombok.*;
 @ToString
 public class AstartesPistolEntity {
     private int id;
-    private String name;
+    private String pistolName;
     private int superchargeWeaponVersion;
-    private int range;
-    private int attacks;
-    private int D3OrD6Attacks;
-    private int ballisticSkill;
-    private int strength;
-    private int armorpenetration;
-    private int damage;
-    private int D3OrD6Damage;
+    private RANGE range;
+    private ATTACKS attacks;
+    private D3ORD6ATTACKS D3OrD6Attacks;
+    private BALLISTICSKILL ballisticSkill;
+    private STRENGTH strength;
+    private ARMORPENETRATION armorpenetration;
+    private DAMAGE damage;
+    private D3ORD6DAMAGE D3OrD6Damage;
 }

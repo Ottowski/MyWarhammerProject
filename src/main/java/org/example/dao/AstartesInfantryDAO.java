@@ -24,10 +24,10 @@ public class AstartesInfantryDAO {
             preparedStatement.setInt(1, astartesInfantry.getId());
             preparedStatement.setString(2, astartesInfantry.getUnitName());
             preparedStatement.setInt(3, astartesInfantry.getUnitLeader());
-            preparedStatement.setInt(4, astartesInfantry.getMovement());
-            preparedStatement.setInt(5, astartesInfantry.getToughness());
-            preparedStatement.setInt(6, astartesInfantry.getWounds());
-            preparedStatement.setInt(7, astartesInfantry.getSave());
+            preparedStatement.setInt(4, astartesInfantry.getMovement().getMovement());
+            preparedStatement.setInt(5, astartesInfantry.getToughness().getToughness());
+            preparedStatement.setInt(6, astartesInfantry.getWounds().getWounds());
+            preparedStatement.setInt(7, astartesInfantry.getSave().getSave());
             preparedStatement.setInt(8, astartesInfantry.getMeleeWeapon());
             preparedStatement.setInt(9, astartesInfantry.getRangedWeapon());
             preparedStatement.setInt(10, astartesInfantry.getPistol());
