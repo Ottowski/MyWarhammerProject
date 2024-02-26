@@ -1,4 +1,6 @@
 package org.example.coreMechanicConcepts;
+import org.example.coreProfileWeaponStats.WEAPONSKILL;
+import org.example.coreProfileWeaponStats.BALLISTICSKILL;
 import org.example.coreProfileWeaponStats.ATTACKS;
 import org.example.entity.AstartesMeleeWeaponEntity;
 import org.example.entity.AstartesRangedWeaponEntity;
@@ -9,35 +11,41 @@ public class HITROLL {
     private static int rollDice() {
         return random.nextInt(6) + 1;
     }
-
-    // Method to determine if a hit is scored for a ranged attack
-    public static boolean rangedAttackHit(AstartesRangedWeaponEntity rangedWeapon) {
-        int rollResult = rollDice();
-        // An unmodified Hit roll of 1 always fails
-        if (rollResult == 1) {
-            return false;
-        }
-        // A hit is scored if the D6 result equals or exceeds the ballistic skill
-        if (rollResult >= rangedWeapon.getBallisticSkill()) {
-            return true;
-        }
-        // Critical Hit: An unmodified Hit roll of 6 always hits
-        return rollResult == 6;
-    }
-
     // Method to determine if a hit is scored for a melee attack
-    public static boolean meleeAttackHit(AstartesMeleeWeaponEntity meleeWeapon) {
-        int rollResult = rollDice();
-        int attacks = meleeWeapon.getAttacks().getAttacks(); // Accessing attacks from ATTACKS object
-        // An unmodified Hit roll of 1 always fails
-        if (rollResult == 1) {
-            return false;
+    public static int meleeAttackHit(AstartesMeleeWeaponEntity meleeWeapon) {
+        int successfulHits = 0;
+        int attacks = meleeWeapon.getAttacks().getAttacks(); // Total number of attacks
+        int weaponSkill = meleeWeapon.getWeaponSkill().getWeaponSkill(); // Weapon skill
+
+        for (int i = 0; i < attacks; i++) {
+            int rollResult = rollDice();
+            // A hit is scored if the D6 result equals or exceeds the weapon skill
+            if (rollResult >= weaponSkill) {
+                successfulHits++;
+            }
+            // Critical Hit: An unmodified Hit roll of 6 always hits
+            else if (rollResult == 6) {
+                successfulHits++;
+            }
         }
-        // A hit is scored if the D6 result equals or exceeds the weapon skill
-        if (rollResult >= meleeWeapon.getWeaponSkill()) {
-            return true;
+        return successfulHits;
+    }
+    // Method to determine if a hit is scored for a ranged attack
+    public static int rangedAttackHit(AstartesRangedWeaponEntity rangedWeapon) {
+        int successfulHits = 0;
+        int attacks = rangedWeapon.getAttacks().getAttacks(); // Total number of attacks
+        int ballisticSkill = rangedWeapon.getBallisticSkill().getBallisticSkill(); // Ballistic skill
+        for (int i = 0; i < attacks; i++) {
+            int rollResult = rollDice();
+            // A hit is scored if the D6 result equals or exceeds the ballistic skill
+            if (rollResult >= ballisticSkill) {
+                successfulHits++;
+            }
+            // Critical Hit: An unmodified Hit roll of 6 always hits
+            else if (rollResult == 6) {
+                successfulHits++;
+            }
         }
-        // Critical Hit: An unmodified Hit roll of 6 always hits
-        return rollResult == 6;
+        return successfulHits;
     }
 }

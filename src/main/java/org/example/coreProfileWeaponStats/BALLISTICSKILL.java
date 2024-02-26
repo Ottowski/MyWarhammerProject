@@ -6,6 +6,6 @@ import lombok.Setter;
 public class BALLISTICSKILL {
     private int ballisticskill;
     public int getBallisticSkill() {
-        return 0;
+        return 1;
     }
 }

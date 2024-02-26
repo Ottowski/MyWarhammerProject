@@ -7,6 +7,6 @@ public class WEAPONSKILL {
     private int weaponskill;
 
     public int getWeaponSkill() {
-        return 0;
+        return 1;
     }
 }
