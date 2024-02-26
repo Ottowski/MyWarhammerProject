@@ -9,7 +9,7 @@ import org.example.coreProfileWeaponStats.*;
 @ToString
 public class SuperchargeWeaponVersionEntity {
     private int id;
-    private String superchargeWeaponName;
+    private NAMEWEAPON superchargeWeaponName;
     private RANGE range;
     private ATTACKS attacks;
     private D3ORD6ATTACKS D3OrD6Attacks;

@@ -22,7 +22,7 @@ public class OrkSpecialrangedweaponDAO {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, orkSpecialrangedweapon.getId());
-            preparedStatement.setString(2, orkSpecialrangedweapon.getSpecialRangedWeaponName());
+            preparedStatement.setString(2, orkSpecialrangedweapon.getSpecialRangedWeaponName().toString());
             preparedStatement.setInt(3, orkSpecialrangedweapon.getRange().getRange());
             preparedStatement.setInt(4, orkSpecialrangedweapon.getAttacks().getAttacks());
             preparedStatement.setInt(5, orkSpecialrangedweapon.getD3OrD6Attacks().getD3OrD6Attacks());

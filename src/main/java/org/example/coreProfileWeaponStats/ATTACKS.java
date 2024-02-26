@@ -1,10 +1,9 @@
 package org.example.coreProfileWeaponStats;
+import lombok.Getter;
+import lombok.Setter;
+@Setter
+@Getter
 public class ATTACKS {
     private int attacks;
-    public int getAttacks() {
-        return attacks;
-    }
-    public void setAttacks(int attacks) {
-        this.attacks = attacks;
-    }
+
 }

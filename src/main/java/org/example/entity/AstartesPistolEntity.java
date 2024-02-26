@@ -9,7 +9,7 @@ import lombok.*;
 @ToString
 public class AstartesPistolEntity {
     private int id;
-    private String pistolName;
+    private NAMEWEAPON pistolName;
     private int superchargeWeaponVersion;
     private RANGE range;
     private ATTACKS attacks;

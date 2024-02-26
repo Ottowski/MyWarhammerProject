@@ -9,7 +9,7 @@ import lombok.*;
 @ToString
 public class OrkRangedWeaponEntity {
     private int id;
-    private String rangedWeaponName;
+    private NAMEWEAPON rangedWeaponName;
     private RANGE range;
     private ATTACKS attacks;
     private D3ORD6ATTACKS D3OrD6Attacks;

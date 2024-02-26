@@ -1,12 +1,11 @@
 package org.example.coreProfileWeaponStats;
-
+import lombok.Getter;
+import lombok.Setter;
+@Setter
+@Getter
 public class BALLISTICSKILL {
     private int ballisticskill;
-    public void setBallisticskill(int ballisticskill) {
-        this.ballisticskill = ballisticskill;
-    }
-
     public int getBallisticSkill() {
-        return ballisticskill;
+        return 0;
     }
 }

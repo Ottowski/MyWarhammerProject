@@ -22,7 +22,7 @@ public class OrkPistolDAO {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, orkPistol.getId());
-            preparedStatement.setString(2, orkPistol.getPistolName());
+            preparedStatement.setString(2, orkPistol.getPistolName().toString());
             preparedStatement.setInt(3, orkPistol.getRange().getRange());
             preparedStatement.setInt(4, orkPistol.getAttacks().getAttacks());
             preparedStatement.setInt(5, orkPistol.getD3OrD6Attacks().getD3OrD6Attacks());

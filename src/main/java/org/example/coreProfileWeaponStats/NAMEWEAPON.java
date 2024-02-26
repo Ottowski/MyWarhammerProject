@@ -1,10 +1,8 @@
 package org.example.coreProfileWeaponStats;
+import lombok.Getter;
+import lombok.Setter;
+@Setter
+@Getter
 public class NAMEWEAPON {
     private int name;
-    public int getName() {
-        return name;
-    }
-    public void setName(int name) {
-        this.name = name;
-    }
 }

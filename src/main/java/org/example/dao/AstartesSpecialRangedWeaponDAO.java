@@ -22,7 +22,7 @@ public class AstartesSpecialRangedWeaponDAO {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, astartesSpecialrangedweapon.getId());
-            preparedStatement.setString(2, astartesSpecialrangedweapon.getSpecialRangedWeaponName());
+            preparedStatement.setString(2, astartesSpecialrangedweapon.getSpecialRangedWeaponName().toString());
             preparedStatement.setInt(3, astartesSpecialrangedweapon.getRange().getRange());
             preparedStatement.setInt(4, astartesSpecialrangedweapon.getAttacks().getAttacks());
             preparedStatement.setInt(5, astartesSpecialrangedweapon.getD3OrD6Attacks().getD3OrD6Attacks());

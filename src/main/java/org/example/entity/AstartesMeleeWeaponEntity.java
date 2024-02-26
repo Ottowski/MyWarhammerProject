@@ -9,7 +9,7 @@ import lombok.*;
 @ToString
 public class AstartesMeleeWeaponEntity {
     private int id;
-    private String meleeWeaponName;
+    private NAMEWEAPON meleeWeaponName;
     private ATTACKS attacks;
     private D3ORD6ATTACKS D3OrD6Attacks;
     private WEAPONSKILL weaponSkill;

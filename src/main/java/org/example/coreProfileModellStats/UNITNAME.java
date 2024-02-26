@@ -1,6 +1,8 @@
 package org.example.coreProfileModellStats;
+import lombok.Getter;
+import lombok.Setter;
+@Setter
+@Getter
 public class UNITNAME {
     private int unitName;
-    public int getUnitName() { return unitName;}
-    public void setUnitName(int unitName) { this.unitName = unitName;}
 }

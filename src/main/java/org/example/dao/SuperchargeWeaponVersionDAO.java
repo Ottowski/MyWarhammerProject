@@ -22,7 +22,7 @@ public class SuperchargeWeaponVersionDAO {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, superchargeWeaponVersion.getId());
-            preparedStatement.setString(2, superchargeWeaponVersion.getSuperchargeWeaponName());
+            preparedStatement.setString(2, superchargeWeaponVersion.getSuperchargeWeaponName().toString());
             preparedStatement.setInt(3, superchargeWeaponVersion.getRange().getRange());
             preparedStatement.setInt(4, superchargeWeaponVersion.getAttacks().getAttacks());
             preparedStatement.setInt(5, superchargeWeaponVersion.getD3OrD6Attacks().getD3OrD6Attacks());

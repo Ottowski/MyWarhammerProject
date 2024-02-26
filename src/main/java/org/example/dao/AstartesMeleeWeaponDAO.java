@@ -23,7 +23,7 @@ public class AstartesMeleeWeaponDAO {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, astartesMeleeWeapon.getId());
-            preparedStatement.setString(2, astartesMeleeWeapon.getMeleeWeaponName());
+            preparedStatement.setString(2, astartesMeleeWeapon.getMeleeWeaponName().toString());
             preparedStatement.setInt(3, astartesMeleeWeapon.getAttacks().getAttacks());
             preparedStatement.setInt(4, astartesMeleeWeapon.getD3OrD6Attacks().getD3OrD6Attacks());
             preparedStatement.setInt(5, astartesMeleeWeapon.getWeaponSkill().getWeaponSkill());

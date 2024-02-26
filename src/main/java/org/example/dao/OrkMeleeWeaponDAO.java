@@ -22,7 +22,7 @@ public class OrkMeleeWeaponDAO {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, orkMeleeWeapon.getId());
-            preparedStatement.setString(2, orkMeleeWeapon.getMeleeWeaponName());
+            preparedStatement.setString(2, orkMeleeWeapon.getMeleeWeaponName().toString());
             preparedStatement.setInt(3, orkMeleeWeapon.getAttacks().getAttacks());
             preparedStatement.setInt(4, orkMeleeWeapon.getD3OrD6Attacks().getD3OrD6Attacks());
             preparedStatement.setInt(5, orkMeleeWeapon.getWeaponSkill().getWeaponSkill());

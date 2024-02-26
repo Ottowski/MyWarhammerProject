@@ -22,7 +22,7 @@ public class AstartesPistolDAO {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection.prepareStatement(INSERT_QUERY);
             preparedStatement.setInt(1, astartesPistol.getId());
-            preparedStatement.setString(2, astartesPistol.getPistolName());
+            preparedStatement.setString(2, astartesPistol.getPistolName().toString());
             preparedStatement.setInt(3, astartesPistol.getSuperchargeWeaponVersion());
             preparedStatement.setInt(4, astartesPistol.getRange().getRange());
             preparedStatement.setInt(5, astartesPistol.getAttacks().getAttacks());
