@@ -1,4 +1,4 @@
 package org.example.coreMechanicConcepts;
 
-public class INFLICTDAMAGE {
+public class DAMAGEROLL {
 }

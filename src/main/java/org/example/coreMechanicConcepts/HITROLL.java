@@ -1,9 +1,9 @@
 package org.example.coreMechanicConcepts;
 import org.example.entity.*;
-import org.example.coreProfileWeaponStats.ATTACKS;
-import org.example.coreProfileWeaponStats.D3ORD6ATTACKS;
+import org.example.coreProfileWeaponStats.WEAPONSKILL;
+import org.example.coreProfileWeaponStats.BALLISTICSKILL;
 import java.util.Random;
-import static org.example.coreMechanicConcepts.BATTLEMECHANIC.performAttackRolls;
+
 public class HITROLL {
     private static final Random random = new Random();
     // Method to roll a six-sided dice
@@ -72,5 +72,13 @@ public class HITROLL {
             }
         }
         return successfulHits;
+    }
+
+    private static int performAttackRolls(Object rangedWeapon) {
+        return 0;
+    }
+
+    public static boolean attacktype(WEAPONSKILL weaponSkill, BALLISTICSKILL ballisticSkill) {
+        return false;
     }
 }
