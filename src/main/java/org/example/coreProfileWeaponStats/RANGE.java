@@ -6,4 +6,7 @@ import lombok.Setter;
 @Getter
 public class RANGE {
     private int range;
+    public RANGE(int range) {
+        this.range = range;
+    }
 }

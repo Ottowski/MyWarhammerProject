@@ -6,4 +6,7 @@ import lombok.Setter;
 public class ATTACKS {
     private int attacks;
 
+    public ATTACKS(int attacks) {
+        this.attacks = attacks;
+    }
 }

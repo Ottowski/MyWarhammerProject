@@ -1,18 +1,15 @@
 package org.example.coreMechanicConcepts;
+
 import org.example.coreProfileWeaponStats.STRENGTH;
 import org.example.coreProfileModellStats.TOUGHNESS;
-import java.util.Random;
+import org.example.utilities.SixSidedDice;
+
+import static org.example.coreMechanicConcepts.BATTLEMECHANIC.random;
+
 public class WOUNDROLL {
-    private static final Random random = new Random();
-
-    // Method to roll a six-sided dice for the wound roll
-    private static int rollDice() {
-        return random.nextInt(6) + 1;
-    }
-
     // Method to determine if a wound is successfully inflicted
     public static boolean woundRoll(STRENGTH strength, TOUGHNESS toughness) {
-        int rollResult = rollDice();
+        int rollResult = SixSidedDice.roll(random);
         int requiredRoll = getRequiredRoll(strength.getStrength(), toughness.getToughness());
 
         // An unmodified Wound roll of 6 is always successful
@@ -48,4 +45,3 @@ public class WOUNDROLL {
         }
     }
 }
-

@@ -5,4 +5,7 @@ import lombok.Setter;
 @Getter
 public class NAMEWEAPON {
     private int name;
+    public NAMEWEAPON(int name) {
+        this.name = name;
+    }
 }

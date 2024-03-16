@@ -9,6 +9,9 @@ import java.util.Random;
 @Getter
 public class D3ORD6ATTACKS {
     private int d3ord6attacks;
+    public D3ORD6ATTACKS(int d3ord6attacks) {
+        this.d3ord6attacks = d3ord6attacks;
+    }
 
     public int getD3OrD6Attacks() {
         // If the value is 3, it's treated as D3. If it's 6, it's treated as D6.

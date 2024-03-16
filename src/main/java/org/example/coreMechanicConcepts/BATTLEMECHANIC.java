@@ -4,16 +4,18 @@ import org.example.coreProfileModellStats.SAVE;
 import org.example.coreProfileModellStats.TOUGHNESS;
 import org.example.coreProfileWeaponStats.*;
 import org.example.entity.*;
+import org.example.utilities.SixSidedDice;
 
 import java.util.Random;
 
 public class BATTLEMECHANIC {
-    private static final Random random = new Random();
+    static final Random random = new Random();
 
     // Method to roll a six-sided dice
     private static int rollDice() {
-        return random.nextInt(6) + 1;
+        return SixSidedDice.roll(random);
     }
+
 
     // Method to get the total number of attacks based on the attack type
     static int performAttackRolls(WEAPONSKILL weaponSkill, BALLISTICSKILL ballisticSkill, ATTACKS attacks, D3ORD6ATTACKS d3ORD6ATTACKS) {
@@ -34,8 +36,6 @@ public class BATTLEMECHANIC {
         }
         return successfulHits;
     }
-
-
 
     // Method to perform wound rolls based on the number of successful hits
     public static int performWoundRolls(int successfulHits, STRENGTH strength, TOUGHNESS toughness, Object entity) {

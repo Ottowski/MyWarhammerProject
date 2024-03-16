@@ -6,4 +6,7 @@ import lombok.Setter;
 public class ARMORPENETRATION {
     private int armorpenetration;
 
+    public ARMORPENETRATION(int armorpenetration) {
+        this.armorpenetration = armorpenetration;
+    }
 }

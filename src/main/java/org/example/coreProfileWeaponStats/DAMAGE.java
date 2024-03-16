@@ -6,4 +6,7 @@ import lombok.Setter;
 @Getter
 public class DAMAGE {
     private int damage;
+    public DAMAGE(int damage) {
+        this.damage = damage;
+    }
 }

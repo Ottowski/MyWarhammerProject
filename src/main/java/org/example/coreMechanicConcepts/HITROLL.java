@@ -1,14 +1,16 @@
 package org.example.coreMechanicConcepts;
+
 import org.example.entity.*;
 import org.example.coreProfileWeaponStats.WEAPONSKILL;
 import org.example.coreProfileWeaponStats.BALLISTICSKILL;
-import java.util.Random;
+import org.example.utilities.SixSidedDice;
+
+import static org.example.coreMechanicConcepts.BATTLEMECHANIC.random;
+import org.example.utilities.RandomNumberGenerator;
 
 public class HITROLL {
-    private static final Random random = new Random();
-    // Method to roll a six-sided dice
-    private static int rollDice() {
-        return random.nextInt(6) + 1;
+
+    public HITROLL(RandomNumberGenerator randomNumberGenerator) {
     }
     // Method to determine the number of successful hits for a melee attack
     public static int meleeAttackHit(Object meleeWeapon) {
@@ -16,7 +18,7 @@ public class HITROLL {
         int totalAttacks = performAttackRolls(meleeWeapon); // Total number of attacks
 
         for (int i = 0; i < totalAttacks; i++) {
-            int rollResult = rollDice();
+            int rollResult = SixSidedDice.roll(random);
             int weaponSkill = 0; // Default weapon skill
 
             // Check the type of melee weapon and get the corresponding weapon skill
@@ -44,7 +46,7 @@ public class HITROLL {
         int totalAttacks = performAttackRolls(rangedWeapon); // Total number of attacks
 
         for (int i = 0; i < totalAttacks; i++) {
-            int rollResult = rollDice();
+            int rollResult = SixSidedDice.roll(random);
             int ballisticSkill = 0; // Default ballistic skill
 
             // Check the type of ranged weapon and get the corresponding ballistic skill
@@ -74,11 +76,17 @@ public class HITROLL {
         return successfulHits;
     }
 
-    private static int performAttackRolls(Object rangedWeapon) {
+    // You may add other methods here...
+
+    // Method to perform attack rolls - this needs to be implemented
+    private static int performAttackRolls(Object weapon) {
+        // You need to implement this method based on your requirements
         return 0;
     }
 
+    // Method to determine the type of attack - this needs to be implemented
     public static boolean attacktype(WEAPONSKILL weaponSkill, BALLISTICSKILL ballisticSkill) {
+        // You need to implement this method based on your requirements
         return false;
     }
 }
