@@ -5,4 +5,7 @@ import lombok.Setter;
 @Getter
 public class TOUGHNESS {
     private int toughness;
+    public TOUGHNESS(int toughness) {
+        this.toughness = toughness;
+    }
 }

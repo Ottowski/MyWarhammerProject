@@ -5,4 +5,7 @@ import lombok.Setter;
 @Getter
 public class MOVEMENT {
     private int movement;
+    public MOVEMENT(int movement) {
+        this.movement = movement;
+    }
 }

@@ -1,8 +1,4 @@
-import org.example.coreMechanicConcepts.SAVINGTHROW;
-import org.example.coreMechanicConcepts.BATTLEMECHANIC;
-import org.example.coreMechanicConcepts.WOUNDROLL;
 import org.example.coreMechanicConcepts.HITROLL;
-
 import org.example.coreProfileWeaponStats.BALLISTICSKILL;
 import org.example.coreProfileWeaponStats.WEAPONSKILL;
 import org.junit.Test;
@@ -24,6 +20,4 @@ public class TestHitRoll {
         int hits = HITROLL.rangedAttackHit(ballisticSkill);
         assertEquals("Number of successful hits for ranged attack should be 0 or positive", 0, hits);
     }
-
-    // Add more test methods as needed
 }

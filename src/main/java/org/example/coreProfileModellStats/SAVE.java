@@ -5,4 +5,7 @@ import lombok.Setter;
 @Getter
 public class SAVE {
     private int save;
+    public SAVE(int save) {
+        this.save = save;
+    }
 }
