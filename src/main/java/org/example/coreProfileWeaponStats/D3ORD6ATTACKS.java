@@ -1,10 +1,7 @@
 package org.example.coreProfileWeaponStats;
-
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.Random;
-
 @Setter
 @Getter
 public class D3ORD6ATTACKS {
