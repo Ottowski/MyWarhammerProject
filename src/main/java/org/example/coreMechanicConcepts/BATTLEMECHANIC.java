@@ -16,9 +16,30 @@ public class BATTLEMECHANIC {
         return SixSidedDice.roll(random);
     }
 
+    // Method to calculate damage inflicted based on the Damage characteristic of the attack
+    public static int calculateDamage(Object damageCharacteristic) {
+        if (damageCharacteristic instanceof DAMAGE) {
+            return calculateDamageFromNormal((DAMAGE) damageCharacteristic);
+        } else if (damageCharacteristic instanceof D3ORD6DAMAGE) {
+            return calculateDamageFromD3OrD6((D3ORD6DAMAGE) damageCharacteristic);
+        } else {
+            throw new IllegalArgumentException("Unsupported damage characteristic type");
+        }
+    }
+
+    // Method to calculate damage inflicted based on the Damage characteristic (always 1)
+    private static int calculateDamageFromNormal(DAMAGE damageCharacteristic) {
+        return 1; // Normal damage always inflicts 1 damage
+    }
+
+    // Method to calculate damage inflicted based on the D3ORD6DAMAGE characteristic (1 to 3 or 1 to 6)
+    private static int calculateDamageFromD3OrD6(D3ORD6DAMAGE damageCharacteristic) {
+        return damageCharacteristic.getD3OrD6Damage();
+    }
 
     // Method to get the total number of attacks based on the attack type
-    static int performAttackRolls(WEAPONSKILL weaponSkill, BALLISTICSKILL ballisticSkill, ATTACKS attacks, D3ORD6ATTACKS d3ORD6ATTACKS) {
+    // Method to get the total number of attacks based on the attack type
+    public static int performAttackRolls(WEAPONSKILL weaponSkill, BALLISTICSKILL ballisticSkill, ATTACKS attacks, D3ORD6ATTACKS d3ORD6ATTACKS) {
         int successfulHits = 0;
         // Check if the attacks are of type ATTACKS or D3ORD6ATTACKS
         if (attacks != null) {
@@ -78,6 +99,7 @@ public class BATTLEMECHANIC {
             default -> 0; // Default to 0 attacks if the entity type is unknown
         };
     }
+
 
     // Method to get the ATTACKS value from the specified ranged weapon
     private static int getAttacksFromRangedWeapons(Object entity) {
