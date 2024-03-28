@@ -17,10 +17,9 @@ public class TestBattleMechanic {
         ATTACKS mockedAttacks = mock(ATTACKS.class);
         when(mockedAttacks.getAttacks()).thenReturn(expectedAttacks);
 
-        // Perform the attack rolls
         int result = BATTLEMECHANIC.performAttackRolls(null, null, mockedAttacks, null);
 
-        // Verify that the result matches the expected number of attacks
+        // Verify that the result matches
         assertEquals("Number of attacks should match", expectedAttacks, result);
     }
 
@@ -31,19 +30,18 @@ public class TestBattleMechanic {
         D3ORD6ATTACKS mockedD3ORD6Attacks = mock(D3ORD6ATTACKS.class);
         when(mockedD3ORD6Attacks.getD3OrD6Attacks()).thenReturn(expectedD3ORD6Attacks);
 
-        // Perform the attack rolls
         int result = BATTLEMECHANIC.performAttackRolls(null, null, null, mockedD3ORD6Attacks);
 
-        // Verify that the result matches the expected number of D3 or D6 attacks
+        // Verify that the result matches
         assertEquals("Number of D3 or D6 attacks should match", expectedD3ORD6Attacks, result);
     }
 
     @Test
     public void testPerformWoundRolls() {
         // Mocked values
-        int successfulHits = 5; // For example, 5 successful hits
-        STRENGTH strength = new STRENGTH(4); // Example strength value
-        TOUGHNESS toughness = new TOUGHNESS(3); // Example toughness value
+        int successfulHits = 5;
+        STRENGTH strength = new STRENGTH(4);
+        TOUGHNESS toughness = new TOUGHNESS(3);
 
         // Perform the wound rolls
         int result = BATTLEMECHANIC.performWoundRolls(successfulHits, strength, toughness, null);

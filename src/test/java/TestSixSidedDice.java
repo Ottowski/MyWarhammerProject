@@ -1,13 +1,10 @@
 import org.example.utilities.SixSidedDice;
 import org.junit.Test;
-
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
 public class TestSixSidedDice {
 
     @Test
