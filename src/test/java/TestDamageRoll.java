@@ -4,6 +4,7 @@ import org.example.coreMechanicConcepts.DAMAGEROLL;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TestDamageRoll {
 
@@ -20,7 +21,7 @@ public class TestDamageRoll {
         // Test with D3 damage characteristic
         D3ORD6DAMAGE damageCharacteristic = new D3ORD6DAMAGE(3); // D3 damage
         int result = DAMAGEROLL.calculateDamage(damageCharacteristic);
-        assertEquals("Damage should be between 1 and 3 for D3 damage", true, result >= 1 && result <= 3);
+        assertTrue("Damage should be between 1 and 3 for D3 damage", result >= 1 && result <= 3);
     }
 
     @Test
@@ -28,6 +29,6 @@ public class TestDamageRoll {
         // Test with D6 damage characteristic
         D3ORD6DAMAGE damageCharacteristic = new D3ORD6DAMAGE(6); // D6 damage
         int result = DAMAGEROLL.calculateDamage(damageCharacteristic);
-        assertEquals("Damage should be between 1 and 6 for D6 damage", true, result >= 1 && result <= 6);
+        assertTrue("Damage should be between 1 and 6 for D6 damage", result >= 1 && result <= 6);
     }
 }

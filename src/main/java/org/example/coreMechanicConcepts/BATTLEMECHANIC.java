@@ -38,7 +38,6 @@ public class BATTLEMECHANIC {
     }
 
     // Method to get the total number of attacks based on the attack type
-    // Method to get the total number of attacks based on the attack type
     public static int performAttackRolls(WEAPONSKILL weaponSkill, BALLISTICSKILL ballisticSkill, ATTACKS attacks, D3ORD6ATTACKS d3ORD6ATTACKS) {
         int successfulHits = 0;
         // Check if the attacks are of type ATTACKS or D3ORD6ATTACKS

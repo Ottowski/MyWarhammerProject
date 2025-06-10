@@ -2,9 +2,10 @@
 import org.example.coreProfileWeaponStats.D3ORD6DAMAGE;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import org.example.coreProfileWeaponStats.D3ORD6ATTACKS;
+
+import static org.junit.Assert.*;
+
 public class TestD3ORD6ATTACKS {
 
     @Test
@@ -26,7 +27,7 @@ public class TestD3ORD6ATTACKS {
         // Test with a value other than 3 or 6
         D3ORD6ATTACKS otherAttacks = new D3ORD6ATTACKS(4);
         int result = otherAttacks.getD3OrD6Attacks();
-        assertTrue("Result should be the same as the input for other values", result == 4);
+        assertEquals("Result should be the same as the input for other values", 4, result);
     }
 
     @Test

@@ -1,7 +1,7 @@
 import org.example.coreProfileWeaponStats.D3ORD6DAMAGE;
 import org.junit.Test;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
+
+import static org.junit.Assert.*;
 
 public class TestD3ORD6DAMAGE {
 
@@ -24,7 +24,7 @@ public class TestD3ORD6DAMAGE {
         // Test with a value other than 3 or 6
         D3ORD6DAMAGE otherTrueDamage = new D3ORD6DAMAGE(4);
         int result = otherTrueDamage.getD3OrD6Damage();
-        assertTrue("Result should be the same as the input for other values", result == 4);
+        assertEquals("Result should be the same as the input for other values", 4, result);
     }
 
     @Test
