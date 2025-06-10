@@ -9,4 +9,8 @@ public class ARMORPENETRATION {
     public ARMORPENETRATION(int armorpenetration) {
         this.armorpenetration = armorpenetration;
     }
+
+    public int getArmorPenetration() {
+        return armorpenetration;
+    }
 }

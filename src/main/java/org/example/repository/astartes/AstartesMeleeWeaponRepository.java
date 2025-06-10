@@ -1,4 +1,4 @@
-package org.example.repository;
+package org.example.repository.astartes;
 import org.example.entity.AstartesMeleeWeaponEntity;
 import java.util.List;
 public interface AstartesMeleeWeaponRepository {

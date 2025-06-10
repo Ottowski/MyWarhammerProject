@@ -70,7 +70,7 @@ public class BATTLEMECHANIC {
     }
 
     // Method to perform saving throws for each successful wound roll
-    public static int performSavingThrows(int successfulWounds, SAVE save, Object entity) {
+    public static int performSavingThrows(int successfulWounds, SAVE save, ARMORPENETRATION ap, Object entity) {
         int successfulSaves = 0;
         for (int i = 0; i < successfulWounds; i++) {
             // Perform saving throw for each successful wound
@@ -82,7 +82,7 @@ public class BATTLEMECHANIC {
     }
 
     // Method to get the ATTACKS value from the specified melee weapon
-    private static int getAttacksFromMeleeWeapons(Object entity) {
+    public static int getAttacksFromMeleeWeapons(Object entity) {
         return switch (entity) {
             case AstartesMeleeWeaponEntity astartesMeleeWeapon -> astartesMeleeWeapon.getAttacks().getAttacks();
             case OrkMeleeWeaponEntity orkMeleeWeapon -> orkMeleeWeapon.getAttacks().getAttacks();
@@ -91,7 +91,7 @@ public class BATTLEMECHANIC {
     }
 
     // Method to get the D3ORD6ATTACKS value from the specified melee weapon
-    private static int getD3OrD6AttacksFromMeleeWeapons(Object entity) {
+    public static int getD3OrD6AttacksFromMeleeWeapons(Object entity) {
         return switch (entity) {
             case AstartesMeleeWeaponEntity astartesMeleeWeapon -> astartesMeleeWeapon.getD3OrD6Attacks().getD3OrD6Attacks();
             case OrkMeleeWeaponEntity orkMeleeWeapon -> orkMeleeWeapon.getD3OrD6Attacks().getD3OrD6Attacks();
@@ -101,7 +101,7 @@ public class BATTLEMECHANIC {
 
 
     // Method to get the ATTACKS value from the specified ranged weapon
-    private static int getAttacksFromRangedWeapons(Object entity) {
+    public static int getAttacksFromRangedWeapons(Object entity) {
         return switch (entity) {
             case AstartesRangedWeaponEntity astartesRangedWeapon -> astartesRangedWeapon.getAttacks().getAttacks();
             case AstartesPistolEntity astartesPistol -> astartesPistol.getAttacks().getAttacks();
@@ -114,7 +114,7 @@ public class BATTLEMECHANIC {
     }
 
     // Method to get the D3ORD6ATTACKS value from the specified ranged weapon
-    private static int getD3OrD6AttacksFromRangedWeapons(Object entity) {
+    public static int getD3OrD6AttacksFromRangedWeapons(Object entity) {
         return switch (entity) {
             case AstartesRangedWeaponEntity astartesRangedWeapon -> astartesRangedWeapon.getD3OrD6Attacks().getD3OrD6Attacks();
             case AstartesPistolEntity astartesPistol -> astartesPistol.getD3OrD6Attacks().getD3OrD6Attacks();
@@ -126,7 +126,7 @@ public class BATTLEMECHANIC {
     }
 
     // Method to get the SAVE value from the specified entity
-    private static int getSaveFromEntity(Object entity) {
+    public static int getSaveFromEntity(Object entity) {
         return switch (entity) {
             case AstartesInfantryEntity astartesInfantryEntity -> astartesInfantryEntity.getSave().getSave();
             case AstartesInfantryLeaderEntity astartesInfantryLeaderEntity -> astartesInfantryLeaderEntity.getSave().getSave();
@@ -137,7 +137,7 @@ public class BATTLEMECHANIC {
     }
 
     // Method to get the TOUGHNESS value from the specified entity
-    private static int getToughnessFromEntity(Object entity) {
+    public static int getToughnessFromEntity(Object entity) {
         return switch (entity) {
             case AstartesInfantryEntity astartesInfantryEntity -> astartesInfantryEntity.getToughness().getToughness();
             case AstartesInfantryLeaderEntity astartesInfantryLeaderEntity -> astartesInfantryLeaderEntity.getToughness().getToughness();

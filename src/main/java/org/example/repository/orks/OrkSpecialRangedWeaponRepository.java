@@ -1,4 +1,4 @@
-package org.example.repository;
+package org.example.repository.orks;
 import org.example.entity.OrkSpecialRangedWeaponEntity;
 import java.util.List;
 public interface OrkSpecialRangedWeaponRepository {
